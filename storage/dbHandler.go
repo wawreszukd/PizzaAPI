@@ -3,9 +3,9 @@ package storage
 import (
 	"PizzeriaAPI/models"
 	"database/sql"
+	"github.com/joho/godotenv"
 	"log"
 	"os"
-	"github.com/joho/godotenv"
 )
 
 // Connect establishes a connection to the database using environment variables for configuration.
@@ -15,15 +15,15 @@ import (
 func Connect() *sql.DB {
 	// Load environment variables from .env file
 	err := godotenv.Load(".env")
-	if err != nil{
+	if err != nil {
 		log.Fatalf("Error loading .env file: %s", err)
 	}
 	// Retrieve environment variables
-	user:= os.Getenv("USER")
-	password:= os.Getenv("PASSWORD")
-	host:= os.Getenv("HOST")
-	port:= os.Getenv("PORT")
-	dbname:= os.Getenv("DBNAME")
+	user := os.Getenv("USER")
+	password := os.Getenv("PASSWORD")
+	host := os.Getenv("HOST")
+	port := os.Getenv("PORT")
+	dbname := os.Getenv("DBNAME")
 	// Construct connection string
 	connStr := "user=" + user + " password=" + password + " host=" + host + " port=" + port + " dbname=" + dbname + " sslmode=disable"
 	// Open connection to database
