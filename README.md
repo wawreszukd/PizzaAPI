@@ -9,18 +9,18 @@ go run main.go
 ## Application endpoints
 The application has the following endpoints:
 ### Get all
-``` 
+``` http request 
 ### GET all pizzas
 GET localhost:8080/pizza
 ###
 ```
 ### Get one
-```
+```http request
 ### GET pizza id 1
 GET localhost:8080/pizza/3
 ```
 ### Post
-``` 
+```http request 
 ### POST new pizza
 POST localhost:8080/pizza
 content-type: application/json
@@ -32,12 +32,12 @@ content-type: application/json
 }
 ```
 ### Delete
-```
+```http request
 ### Delete pizza id 2
 DELETE localhost:8080/pizza/2
 ```
 ### Put
-```
+```http request
 ### PUT pizza id 2
 PUT localhost:8080/pizza/3
 content-type: application/json
