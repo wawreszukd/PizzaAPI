@@ -1,0 +1,31 @@
+### GET all pizzas
+GET localhost:8080/pizza
+
+###
+### GET pizza id 1
+GET localhost:8080/pizza/3
+
+###
+### POST new pizza
+POST localhost:8080/pizza
+content-type: application/json
+
+{
+    "name": "Pizza 1",
+    "dough": "white dough",
+    "price": 10.0
+}
+###
+### Delete pizza id 2
+DELETE localhost:8080/pizza/2
+
+###
+### PUT pizza id 2
+PUT localhost:8080/pizza/3
+content-type: application/json
+
+{
+    "name": "Pizza 333",
+    "dough": "white dough",
+    "price": 20.0
+}
